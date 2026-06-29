@@ -99,13 +99,15 @@ export interface Client {
   name: string;
   /** Path under public/assets/clients/ */
   logo: string;
+  /** Logo ships as a baked dark tile — render it crisp (no grayscale/fade) and rounded. */
+  tile?: boolean;
 }
 
 export const CLIENTS: Client[] = [
   { name: 'Pharmadoctor', logo: 'assets/clients/pharmadoctor.png' },
   { name: 'GAIA Technologies', logo: 'assets/clients/gaia.png' },
   { name: 'Innocent Drinks', logo: 'assets/clients/innocent.png' },
-  { name: 'MOTH Drinks', logo: 'assets/clients/moth.svg' },
+  { name: 'MOTH Drinks', logo: 'assets/clients/moth.png', tile: true },
   { name: 'Wild Eye Photography', logo: 'assets/clients/wildeye.png' },
   { name: 'Haringtons Hairdressing', logo: 'assets/clients/harringtons-ink.png' },
 ];
@@ -158,7 +160,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     summary:
       'Developed a custom API and application to improve data collection and management across multiple systems and suppliers, improving system security and data flow.',
     tags: ['Custom API', 'Integrations', 'Data', 'Security'],
-    image: 'assets/clients/moth.svg',
+    image: 'assets/clients/moth.png',
     media: 'logo',
   },
   {

@@ -47,11 +47,25 @@
   filter: grayscale(0);
 }
 
+/* MOTH ships as a baked white-on-black tile — show it crisp (full opacity, no
+   grey) with rounded corners; a touch taller so the boxed text reads at a
+   weight similar to the bare wordmarks. */
+.trusted__item--tile img {
+  height: 40px;
+  max-width: 200px;
+  border-radius: 6px;
+  opacity: 1;
+  filter: none;
+}
+
 @media (max-width: 620px) {
   .trusted__list {
     gap: var(--space-8) var(--space-10);
   }
   .trusted__item img {
     height: 26px;
+  }
+  .trusted__item--tile img {
+    height: 30px;
   }
 }

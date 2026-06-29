@@ -3,7 +3,7 @@
     <p class="trusted__label">Trusted by</p>
     <ul class="trusted__list">
       @for (client of clients; track client.name) {
-        <li class="trusted__item">
+        <li class="trusted__item" [class.trusted__item--tile]="client.tile">
           <img [src]="client.logo" [alt]="client.name" loading="lazy" />
         </li>
       }
