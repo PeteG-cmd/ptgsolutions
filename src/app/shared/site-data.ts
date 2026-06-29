@@ -130,37 +130,6 @@ export interface CaseStudy {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    title: 'Gaia — BNG Marketplace',
-    sector: 'Environment / Biodiversity',
-    stage: 'Scaling',
-    summary:
-      "Designed and built the marketplace for Biodiversity Net Gain credits — partnering from the first designs through to launch and ongoing growth. Now the UK's largest BNG marketplace.",
-    tags: ['Product design', 'Marketplace', 'Launch & growth'],
-    image: 'assets/case-studies/gaia-marketplace.png',
-    media: 'screenshot',
-    link: 'https://gaiacompany.io/biodiversity-units/',
-  },
-  {
-    title: 'Pharmadoctor',
-    sector: 'Healthcare / Pharmacy',
-    stage: 'Live',
-    summary:
-      "Rebuilt 'Version 2' of their web application and underlying business processes — a full system redesign with built-in e-commerce and a new question engine.",
-    tags: ['System redesign', 'E-commerce', 'Question engine'],
-    image: 'assets/case-studies/pharmadoctor.png',
-    media: 'screenshot',
-  },
-  {
-    title: 'MOTH Drinks',
-    sector: 'Drinks / FMCG',
-    stage: 'Live',
-    summary:
-      'Developed a custom API and application to improve data collection and management across multiple systems and suppliers.',
-    tags: ['Custom API', 'Integrations', 'Data'],
-    image: 'assets/clients/moth.svg',
-    media: 'logo',
-  },
-  {
     title: 'Gaia — Carbon Accounting',
     sector: 'Climate / Carbon',
     stage: 'Live',
@@ -170,6 +139,38 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'assets/case-studies/gaia-carbon.png',
     media: 'screenshot',
     link: 'https://gaiacompany.io/carbon-accounting-software/',
+  },
+  {
+    title: 'Pharmadoctor',
+    sector: 'Healthcare / Pharmacy',
+    stage: 'Live',
+    summary:
+      "Rebuilt 'Version 2' of their web application and underlying business processes. A full system redesign with built-in e-commerce and a new question engine.",
+    tags: ['System redesign', 'E-commerce', 'Consultation engine'],
+    image: 'assets/case-studies/pharmadoctor.png',
+    media: 'screenshot',
+    link: 'https://pharmadoctor.co.uk/',
+  },
+  {
+    title: 'MOTH Drinks',
+    sector: 'Drinks / FMCG',
+    stage: 'Live',
+    summary:
+      'Developed a custom API and application to improve data collection and management across multiple systems and suppliers, improving system security and data flow.',
+    tags: ['Custom API', 'Integrations', 'Data', 'Security'],
+    image: 'assets/clients/moth.svg',
+    media: 'logo',
+  },
+  {
+    title: 'Gaia — BNG Marketplace',
+    sector: 'Environment / Biodiversity',
+    stage: 'Scaling',
+    summary:
+      "Designed and built the marketplace for Biodiversity Net Gain credits. Partnering from the first designs through to launch and ongoing growth. Now the UK's largest BNG marketplace.",
+    tags: ['Product design', 'Marketplace', 'Launch & growth'],
+    image: 'assets/case-studies/gaia-marketplace.png',
+    media: 'screenshot',
+    link: 'https://gaiacompany.io/biodiversity-units/',
   },
 ];
 

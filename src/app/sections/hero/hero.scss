@@ -82,7 +82,7 @@
 
 .hero__visual-caption {
   position: absolute;
-  bottom: var(--space-8);
+  bottom: var(--space-12);
   left: 0;
   right: 0;
   text-align: center;
@@ -91,6 +91,23 @@
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
   color: var(--growth-300);
+}
+
+/* Anything but the wide desktop layout: take the caption out of the bottom
+   overlay and stack it beneath the tree mark as a centred flex column, with a
+   real gap, so it can never ride over the image on short panels. */
+@media (max-width: 1024px) {
+  .hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-10);
+  }
+
+  .hero__visual-caption {
+    position: static;
+  }
 }
 
 @media (max-width: 920px) {

@@ -18,6 +18,10 @@
   overflow: hidden;
 }
 
+.case--logo .case__thumb {
+  background: var(--sand-100);
+}
+
 .case__watermark {
   position: absolute;
   width: 70%;
@@ -43,15 +47,18 @@
 }
 
 /* Logo card — centred mark on a light block so dark logos stay legible. */
-.case--logo .case__thumb {
-  background: var(--sand-100);
-}
-
 .case__logo {
   position: relative;
   width: 56%;
   max-height: 56%;
   object-fit: contain;
+}
+
+.case__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
 }
 
 .case__stage {
@@ -60,13 +67,6 @@
   left: var(--space-3);
   background: rgba(250, 249, 245, 0.92);
   color: var(--forest-700);
-}
-
-.case__body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-6);
 }
 
 .case__sector {
