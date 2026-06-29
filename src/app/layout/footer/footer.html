@@ -1,0 +1,42 @@
+<footer class="site-footer">
+  <img
+    src="assets/logo/ptg-tree-mark-white.png"
+    alt=""
+    aria-hidden="true"
+    class="site-footer__watermark"
+  />
+
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="assets/logo/ptg-logo-cream.png" alt="PTG Solutions" class="site-footer__logo" />
+      <p class="site-footer__tag">{{ site.tagline }}</p>
+    </div>
+
+    <nav class="site-footer__col" aria-label="Site">
+      <p class="site-footer__heading">Explore</p>
+      @for (item of nav; track item.label) {
+        <a [routerLink]="item.route" [fragment]="item.fragment">{{ item.label }}</a>
+      }
+    </nav>
+
+    <nav class="site-footer__col" aria-label="Company">
+      <p class="site-footer__heading">Get in touch</p>
+      <a routerLink="/contact">Start a project</a>
+      <a routerLink="/login">Sign in</a>
+      <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+    </nav>
+
+    <div class="site-footer__col">
+      <p class="site-footer__heading">Find us</p>
+      <address class="site-footer__address">
+        {{ site.address.line1 }}<br />
+        {{ site.address.line2 }}
+      </address>
+    </div>
+  </div>
+
+  <div class="container site-footer__legal">
+    <p>© {{ year }} {{ site.legalName }}. All rights reserved.</p>
+    <p class="site-footer__where">{{ site.positioning }}</p>
+  </div>
+</footer>

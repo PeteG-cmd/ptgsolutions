@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-page);
+  padding-block: clamp(var(--space-12), 7vw, var(--space-24));
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 60ch;
+}
+
+.hero__title {
+  font-size: clamp(var(--text-4xl), 5.5vw, var(--text-6xl));
+  font-weight: var(--weight-semibold);
+  margin-block: var(--space-5) var(--space-6);
+}
+
+.hero__accent {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero__lead {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 54ch;
+  margin-bottom: var(--space-8);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-12);
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
+  max-width: 600px;
+}
+
+/* Right-hand forest panel featuring the circuit-tree mark --------- */
+.hero__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 440px;
+  padding: var(--space-12);
+  border-radius: var(--radius-2xl);
+  background: var(--forest-800);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.hero__visual-bg {
+  position: absolute;
+  width: 150%;
+  max-width: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.hero__tree {
+  position: relative;
+  width: min(64%, 280px);
+  height: auto;
+}
+
+.hero__visual-caption {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--growth-300);
+}
+
+@media (max-width: 920px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .hero__content {
+    max-width: none;
+  }
+
+  .hero__visual {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .hero__visual {
+    min-height: 240px;
+    padding: var(--space-8);
+  }
+}

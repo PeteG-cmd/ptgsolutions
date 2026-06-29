@@ -1,0 +1,43 @@
+.work-hero {
+  background: var(--surface-page);
+  padding-block: var(--space-20) var(--space-12);
+}
+
+.work-hero__title {
+  font-size: clamp(var(--text-4xl), 5.5vw, var(--text-5xl));
+  margin-block: var(--space-4) var(--space-5);
+}
+
+.work-hero__lead {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 56ch;
+  margin: 0;
+}
+
+.work-grid-section {
+  padding-top: var(--space-8);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.work-cta {
+  padding-block: var(--space-20);
+}
+
+.work-cta__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.work-cta__title {
+  font-size: var(--text-3xl);
+  margin: 0;
+}

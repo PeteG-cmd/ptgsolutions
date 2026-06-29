@@ -1,0 +1,29 @@
+<section class="work-hero">
+  <div class="container">
+    <app-eyebrow rule>Our work</app-eyebrow>
+    <h1 class="work-hero__title">Ideas we've helped take root</h1>
+    <p class="work-hero__lead">
+      A selection of products we've consulted on, designed and built with our clients — from the
+      first designs through to launch and ongoing growth.
+    </p>
+  </div>
+</section>
+
+<section class="section work-grid-section">
+  <div class="container">
+    <div class="work-grid">
+      @for (study of studies; track study.title) {
+        <app-case-card [study]="study" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="work-cta section--white">
+  <div class="container--narrow work-cta__inner">
+    <h2 class="work-cta__title">Could your idea be next?</h2>
+    <a class="btn btn--accent btn--lg" routerLink="/contact">
+      Start a conversation <app-icon name="arrow-right" [size]="18" />
+    </a>
+  </div>
+</section>

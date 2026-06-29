@@ -1,0 +1,43 @@
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <app-eyebrow rule>Consulting &amp; development for startups</app-eyebrow>
+
+      <h1 class="hero__title">
+        We turn early ideas into <em class="hero__accent">living</em> products.
+      </h1>
+
+      <p class="hero__lead">{{ site.intro }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--accent btn--lg" routerLink="/contact">
+          Start a conversation <app-icon name="arrow-right" [size]="18" />
+        </a>
+        <a class="btn btn--secondary btn--lg" routerLink="/" fragment="services">
+          See what we do
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        @for (stat of stats; track stat.label) {
+          <app-stat [value]="stat.value" [label]="stat.label" />
+        }
+      </div>
+    </div>
+
+    <aside class="hero__visual">
+      <img
+        src="assets/logo/ptg-tree-mark-white.png"
+        alt=""
+        aria-hidden="true"
+        class="hero__visual-bg"
+      />
+      <img
+        src="assets/logo/ptg-tree-mark-white.png"
+        alt="PTG circuit-tree mark"
+        class="hero__tree"
+      />
+      <span class="hero__visual-caption">Understand &nbsp;|&nbsp; Build &nbsp;|&nbsp; Grow</span>
+    </aside>
+  </div>
+</section>

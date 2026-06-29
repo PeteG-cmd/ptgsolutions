@@ -1,0 +1,30 @@
+<app-hero />
+<app-brands />
+<app-services />
+<app-about />
+<app-work-preview />
+<app-testimonial />
+
+<section class="cta">
+  <img
+    src="assets/logo/ptg-tree-mark-white.png"
+    alt=""
+    aria-hidden="true"
+    class="cta__watermark"
+  />
+  <div class="container--narrow cta__inner">
+    <h2 class="cta__title">Have an idea worth growing?</h2>
+    <p class="cta__text">
+      Tell us what you're working on and we'll help you take the next step — from first idea to a
+      product that ships.
+    </p>
+    <div class="cta__actions">
+      <a class="btn btn--accent btn--lg" routerLink="/contact">
+        Start a conversation <app-icon name="arrow-right" [size]="18" />
+      </a>
+      <a class="btn btn--ghost btn--lg btn--on-dark" [href]="'mailto:' + site.email">
+        {{ site.email }}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<section id="process" class="section">
+  <span id="about" class="anchor-offset" aria-hidden="true"></span>
+  <div class="container process">
+    <div class="process__intro">
+      <app-eyebrow rule>Our approach</app-eyebrow>
+      <h2 class="section__title">A partner from first idea to finished product</h2>
+      <p class="process__lead">
+        PTG Solutions works alongside founders and small teams as a hands-on partner. We bring
+        the consulting to get the direction right and the engineering to actually build it — so
+        your early project becomes something people use and love.
+      </p>
+      <a class="btn btn--primary" routerLink="/contact">Work with us</a>
+    </div>
+
+    <ol class="process__steps">
+      @for (step of steps; track step.number) {
+        <li class="step-card reveal" appReveal>
+          <span class="step-card__num">{{ step.number }}</span>
+          <div>
+            <h3 class="step-card__title">{{ step.title }}</h3>
+            <p class="step-card__text">{{ step.description }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+@if (showChrome()) {
+  <app-header />
+}
+
+<main>
+  <router-outlet />
+</main>
+
+@if (showChrome()) {
+  <app-footer />
+}

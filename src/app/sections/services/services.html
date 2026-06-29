@@ -1,0 +1,26 @@
+<section id="services" class="section section--white">
+  <div class="container">
+    <div class="section__head">
+      <app-eyebrow rule>What we do</app-eyebrow>
+      <h2 class="section__title">Help at every stage of the journey</h2>
+    </div>
+
+    <div class="services-grid">
+      @for (service of services; track service.title) {
+        <article class="service-card card card--interactive reveal" appReveal>
+          <span class="service-card__icon" aria-hidden="true">
+            <app-icon [name]="service.icon" [size]="24" />
+          </span>
+          <h3 class="service-card__title">{{ service.title }}</h3>
+          <p class="service-card__text">{{ service.description }}</p>
+        </article>
+      }
+    </div>
+
+    <div class="services__cta">
+      <a class="btn btn--secondary" href="PTG-Pitch-Deck.html" download>
+        <app-icon name="download" [size]="18" /> Download our pitch deck
+      </a>
+    </div>
+  </div>
+</section>

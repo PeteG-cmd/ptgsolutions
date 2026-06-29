@@ -1,0 +1,17 @@
+<section class="section testimonial">
+  <div class="container--narrow testimonial__inner reveal" appReveal>
+    <span class="testimonial__quote-icon" aria-hidden="true">
+      <app-icon name="quote" [size]="40" />
+    </span>
+    <blockquote class="testimonial__quote">{{ testimonial.quote }}</blockquote>
+    <div class="testimonial__person">
+      <span class="testimonial__avatar" aria-hidden="true">{{
+        testimonial.author.charAt(0)
+      }}</span>
+      <div>
+        <p class="testimonial__author">{{ testimonial.author }}</p>
+        <p class="testimonial__role">{{ testimonial.role }}</p>
+      </div>
+    </div>
+  </div>
+</section>

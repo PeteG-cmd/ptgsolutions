@@ -1,0 +1,19 @@
+<section id="work" class="section section--white">
+  <div class="container">
+    <div class="work-preview__head">
+      <div class="section__head">
+        <app-eyebrow rule>Selected work</app-eyebrow>
+        <h2 class="section__title">A few products we've helped grow</h2>
+      </div>
+      <a class="work-preview__all" routerLink="/work">
+        See all work <app-icon name="arrow-right" [size]="18" />
+      </a>
+    </div>
+
+    <div class="work-preview__grid reveal" appReveal>
+      @for (study of studies; track study.title) {
+        <app-case-card [study]="study" />
+      }
+    </div>
+  </div>
+</section>

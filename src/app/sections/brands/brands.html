@@ -1,0 +1,12 @@
+<section class="trusted section--sunken">
+  <div class="container trusted__inner reveal" appReveal>
+    <p class="trusted__label">Trusted by</p>
+    <ul class="trusted__list">
+      @for (client of clients; track client.name) {
+        <li class="trusted__item">
+          <img [src]="client.logo" [alt]="client.name" loading="lazy" />
+        </li>
+      }
+    </ul>
+  </div>
+</section>
