@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    title: 'PTG Solutions — Product consulting & development for startups',
+    title: 'PTG Solutions — Software consulting, development & security',
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
   },
   {

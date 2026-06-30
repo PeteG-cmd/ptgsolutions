@@ -1,0 +1,34 @@
+<section id="who-we-help" class="section section--white">
+  <div class="container">
+    <div class="section__head">
+      <app-eyebrow rule>Who we help</app-eyebrow>
+      <h2 class="section__title">Two ways we work with you</h2>
+      <p class="audiences__lead">
+        Whether you're getting a brand-new idea off the ground or making an established business
+        run better, we bring the same hands-on engineering — and the same focus on keeping your
+        data and systems secure.
+      </p>
+    </div>
+
+    <div class="audiences-grid">
+      @for (audience of audiences; track audience.title) {
+        <article class="audience-card card reveal" appReveal>
+          <span class="audience-card__icon" aria-hidden="true">
+            <app-icon [name]="audience.icon" [size]="24" />
+          </span>
+          <p class="audience-card__eyebrow">{{ audience.eyebrow }}</p>
+          <h3 class="audience-card__title">{{ audience.title }}</h3>
+          <p class="audience-card__text">{{ audience.description }}</p>
+          <ul class="audience-card__points">
+            @for (point of audience.points; track point) {
+              <li>
+                <app-icon name="check" [size]="18" />
+                <span>{{ point }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>

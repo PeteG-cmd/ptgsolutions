@@ -4,6 +4,7 @@ import { Icon } from '../../shared/icon';
 import { Hero } from '../../sections/hero/hero';
 import { Services } from '../../sections/services/services';
 import { Brands } from '../../sections/brands/brands';
+import { Audiences } from '../../sections/audiences/audiences';
 import { About } from '../../sections/about/about';
 import { WorkPreview } from '../../sections/work-preview/work-preview';
 import { Testimonial } from '../../sections/testimonial/testimonial';
@@ -17,6 +18,7 @@ import { SITE } from '../../shared/site-data';
     Hero,
     Services,
     Brands,
+    Audiences,
     About,
     WorkPreview,
     Testimonial,

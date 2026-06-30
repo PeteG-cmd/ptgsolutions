@@ -8,7 +8,13 @@ import { Icon } from '../../shared/icon';
 import { Eyebrow } from '../../shared/eyebrow';
 import { SITE } from '../../shared/site-data';
 
-const STAGES = ['Idea', 'MVP', 'Scaling', 'Live', 'Not sure yet'];
+const TOPICS = [
+  'Build a new product or MVP',
+  'Improve an existing product',
+  'Data & integration',
+  'Cyber & data security',
+  'Not sure yet',
+];
 
 @Component({
   selector: 'app-contact',
@@ -19,14 +25,14 @@ const STAGES = ['Idea', 'MVP', 'Scaling', 'Live', 'Not sure yet'];
 export class Contact {
   private readonly fb = inject(FormBuilder);
   protected readonly site = SITE;
-  protected readonly stages = STAGES;
+  protected readonly topics = TOPICS;
   protected readonly submitted = signal(false);
   protected readonly sent = signal(false);
 
   protected readonly form = this.fb.nonNullable.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    stage: [STAGES[0]],
+    topic: [TOPICS[0]],
     message: ['', [Validators.required, Validators.minLength(10)]],
     keepUpdated: [false],
   });
@@ -45,12 +51,12 @@ export class Contact {
 
     // No backend (GitHub Pages): compose a pre-filled email in the visitor's
     // mail client so the enquiry actually reaches us.
-    const { name, email, stage, message } = this.form.getRawValue();
-    const subject = `New project enquiry — ${name}`;
+    const { name, email, topic, message } = this.form.getRawValue();
+    const subject = `New enquiry — ${name}`;
     const body = [
       `Name: ${name}`,
       `Email: ${email}`,
-      `Stage: ${stage}`,
+      `Enquiry: ${topic}`,
       '',
       message,
     ].join('\n');
