@@ -33,7 +33,7 @@ import { CaseStudy } from './site-data';
           }
         } @else {
           <img
-            src="assets/logo/ptg-tree-mark-white.png"
+            src="assets/logo/ptg-mark-cream.svg"
             alt=""
             aria-hidden="true"
             class="case__watermark"

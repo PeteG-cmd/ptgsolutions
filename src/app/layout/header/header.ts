@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Icon } from '../../shared/icon';
+import { Logo } from '../../shared/logo';
 import { SITE } from '../../shared/site-data';
 
 interface NavLink {
@@ -12,7 +13,7 @@ interface NavLink {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive, Icon],
+  imports: [RouterLink, RouterLinkActive, Icon, Logo],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

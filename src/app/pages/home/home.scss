@@ -9,10 +9,10 @@
 .cta__watermark {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 620px;
-  max-width: 90%;
-  transform: translate(-50%, -50%);
+  right: -150px;
+  width: 600px;
+  max-width: 65%;
+  transform: translateY(-50%);
   opacity: 0.06;
   pointer-events: none;
 }

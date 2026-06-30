@@ -6,11 +6,12 @@ import {
   Validators,
 } from '@angular/forms';
 import { Icon } from '../../shared/icon';
+import { Logo } from '../../shared/logo';
 import { SITE } from '../../shared/site-data';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink, ReactiveFormsModule, Icon],
+  imports: [RouterLink, ReactiveFormsModule, Icon, Logo],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
