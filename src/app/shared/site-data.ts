@@ -12,14 +12,14 @@ export const SITE = {
   legalName: 'PTG Solutions LTD',
   email: 'info@ptgsolutions.co.uk',
   domain: 'ptgsolutions.co.uk',
-  tagline: 'We grow ideas into living products.',
-  positioning: 'Consulting & development for startups.',
+  tagline: 'We build, grow and secure great software.',
+  positioning: 'Consulting, development & security — for startups and growing businesses.',
   address: {
     line1: '167–169 Great Portland St',
     line2: 'London W1W 5PF',
   },
   intro:
-    'We partner with startups and small businesses to consult on, build and grow their early apps, websites and products — turning promising ideas into ventures that ship and scale.',
+    'From founders launching a first product to established teams modernising how they work, we help you build the right software, get your data working for you, and keep both secure.',
   /** Optional calendar link for "book a call" — set to a real Calendly/Cal.com URL. */
   bookingUrl: '',
   social: {
@@ -35,9 +35,9 @@ export interface StatItem {
   label: string;
 }
 export const STATS: StatItem[] = [
-  { value: '6 wks', label: 'Idea to MVP' },
-  { value: 'End to end', label: 'Consult · build · grow' },
-  { value: 'Startups', label: 'Our focus' },
+  { value: 'Startups & SMEs', label: 'Who we partner with' },
+  { value: 'Security-first', label: 'In everything we build' },
+  { value: 'End to end', label: 'Consult · build · support' },
 ];
 
 export interface Service {
@@ -49,22 +49,28 @@ export interface Service {
 
 export const SERVICES: Service[] = [
   {
-    title: 'Product consulting',
+    title: 'Consulting & strategy',
     description:
-      'Shape the idea: scoping, technical strategy, architecture and a pragmatic roadmap that gets you to a launchable product fast.',
+      'Shape the idea or the roadmap: scoping, technical strategy and a pragmatic plan — whether you are launching something new or improving how your business already runs.',
     icon: 'compass',
   },
   {
     title: 'Design & development',
     description:
-      'Hands-on build of web and mobile apps — from MVP to polished release — with clean, maintainable code you can grow on.',
+      'Hands-on build of web and mobile apps, internal tools and integrations — clean, maintainable code, from a first MVP to a mature, business-critical platform.',
     icon: 'code',
   },
   {
-    title: 'Growth & iteration',
+    title: 'Data & integration',
     description:
-      'Once you are live, we help you measure, refine and evolve the product so early traction turns into sustained success.',
-    icon: 'trending-up',
+      'Connect the systems you already use and improve the quality, flow and availability of your data — turning scattered information into something you can trust and act on.',
+    icon: 'database',
+  },
+  {
+    title: 'Cyber & data security',
+    description:
+      'Security built in, not bolted on: secure architecture, access control and data protection that reduce risk and protect your customers, your business and your reputation.',
+    icon: 'shield-check',
   },
 ];
 
@@ -79,19 +85,58 @@ export const PROCESS: ProcessStep[] = [
     number: '01',
     title: 'Understand',
     description:
-      'We get to grips with your idea, your users and your goals — then map the fastest credible route to a real product.',
+      'We get to grips with your goals, your users and your existing systems — then map the most credible route forward, whether that is a new product or a better-run business.',
   },
   {
     number: '02',
     title: 'Build',
     description:
-      'We design and develop a focused first version, keeping the code clean so it is ready to grow rather than be rewritten.',
+      'We design and develop the right solution — apps, integrations or internal tools — with clean, secure and maintainable code built to last.',
   },
   {
     number: '03',
     title: 'Grow',
     description:
-      'We launch, learn from real usage and iterate — helping early traction turn into a sustainable, successful product.',
+      'We launch, measure and keep improving — strengthening data, reliability and security so early wins turn into lasting, resilient results.',
+  },
+];
+
+export interface Audience {
+  /** Lucide icon name (see app/shared/icon.ts). */
+  icon: string;
+  /** Short label, e.g. 'Startups & founders'. */
+  eyebrow: string;
+  title: string;
+  description: string;
+  points: string[];
+}
+
+export const AUDIENCES: Audience[] = [
+  {
+    icon: 'sparkles',
+    eyebrow: 'Startups & founders',
+    title: 'Turn your idea into a product',
+    description:
+      'We help you go from concept to a real, launchable product — getting the direction right, building it properly, and giving it secure foundations from day one.',
+    points: [
+      'Discovery, scoping & technical strategy',
+      'MVP design & full-stack build',
+      'Launch, measure & iterate',
+      'Security and good data habits from the start',
+    ],
+  },
+  {
+    icon: 'gauge',
+    eyebrow: 'Small & medium businesses',
+    title: 'Make your business run better',
+    description:
+      'We help established teams work smarter — automating manual processes, joining up the tools you already use, and getting your data flowing reliably, accurately and securely.',
+    points: [
+      'Streamline manual, repetitive processes',
+      'Connect systems & improve data flow',
+      'Reliable, available and accurate data',
+      'Cyber & data security hardening',
+    ],
   },
 ];
 

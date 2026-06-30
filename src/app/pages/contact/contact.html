@@ -2,10 +2,11 @@
   <div class="container contact__grid">
     <div class="contact__intro">
       <app-eyebrow rule>Start a project</app-eyebrow>
-      <h1 class="contact__title">Let's talk about your idea</h1>
+      <h1 class="contact__title">Let's talk about your project</h1>
       <p class="contact__lead">
-        Whether you have a fully-formed brief or just the seed of an idea, we'd love to hear about
-        it. Tell us a little below and we'll get back to you to arrange a chat.
+        Launching something new, improving how your business runs, or tightening up your data and
+        security — whatever the project, we'd love to hear about it. Tell us a little below and
+        we'll get back to you to arrange a chat.
       </p>
 
       <ul class="contact__methods">
@@ -75,10 +76,10 @@
           </div>
 
           <div class="field">
-            <label for="stage">Project stage</label>
-            <select id="stage" formControlName="stage">
-              @for (stage of stages; track stage) {
-                <option [value]="stage">{{ stage }}</option>
+            <label for="topic">How can we help?</label>
+            <select id="topic" formControlName="topic">
+              @for (topic of topics; track topic) {
+                <option [value]="topic">{{ topic }}</option>
               }
             </select>
           </div>
